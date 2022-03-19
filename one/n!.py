@@ -1,5 +1,5 @@
 # 递归
-import copy
+
 def fac(n):
     if n==1:
         return n
