@@ -1,7 +1,6 @@
 # 简单选择排序
 class SelectSort:
     def __init__(self, a):
-        i = 0
         n = len(a)
 
         def Sort(a, i):
@@ -12,23 +11,26 @@ class SelectSort:
                 a[i], a[k] = a[k], a[i]
             Sort(a, i + 1)
 
-        Sort(a,0)
+        Sort(a, 0)
         print(a)
 
-#冒泡排序
+
+# 冒泡排序
 class BubbleSort:
-    def __init__(self,a):
-        i=0
-        n=len(a)
+    def __init__(self, a):
+        i = 0
+        n = len(a)
+
         def sort(n):
-            if i==n-1:
+            if i == n - 1:
                 return
-            for j in range(i,n-1):
-                if a[j]>a[j+1]:
-                    a[j],a[j+1]=a[j+1],a[j]
+            for j in range(i, n - 1):
+                if a[j] > a[j + 1]:
+                    a[j], a[j + 1] = a[j + 1], a[j]
                 else:
                     continue
-            sort(n-1)
+            sort(n - 1)
+
         sort(n)
         print(a)
 
