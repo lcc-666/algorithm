@@ -14,7 +14,7 @@ class SelectSort:
 
         Sort(a,0)
         print(a)
-
+#冒泡排序
 class BubbleSort:
     def __init__(self,a):
         i=0
