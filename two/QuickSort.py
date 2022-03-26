@@ -24,8 +24,9 @@ def QuickSort(a,s, t):
 
 if __name__ == '__main__':
     a = [6, 8, 6, 4, 7, 6, 1, 56, 8]
+    print("排序前", a)
     QuickSort(a,0,len(a)-1)
-    print(a)
+    print("排序后",a)
 
 
 
