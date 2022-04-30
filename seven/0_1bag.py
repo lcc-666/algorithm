@@ -18,30 +18,32 @@ class bag:
                 dp[0][r] = 0
             for i in range(1, n + 1):
                 for r in range(1, W + 1):
-                    if r<w[i]:
+                    if r < w[i]:
                         dp[i][r] = dp[i - 1][r]
                     else:
                         dp[i][r] = max(dp[i - 1][r], dp[i - 1][r - w[i]] + v[i])
+
         def Buildx():
-            i=n
-            r=W
-            while i>=0:
-                if dp[i][r]!=dp[i-1][r]:
-                    x[i]=1
-                    maxv[0]+=v[i]
-                    r-=w[i]
+            i = n
+            r = W
+            while i >= 0:
+                if dp[i][r] != dp[i - 1][r]:
+                    x[i] = 1
+                    maxv[0] += v[i]
+                    r -= w[i]
                 else:
-                    x[i]=0
-                i-=1
+                    x[i] = 0
+                i -= 1
 
         Knap()
         Buildx()
-        weight=0
-        for i in range(1,6):
-            weight+=w[i]*x[i]
+        weight = 0
+        for i in range(1, 6):
+            weight += w[i] * x[i]
         print(x[1:6])
         print("装入物品总重量为{}".format(weight))
         print("总价值为{}".format(maxv[0]))
 
+
 if __name__ == '__main__':
-    s=bag()
+    s = bag()
