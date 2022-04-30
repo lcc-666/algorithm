@@ -14,8 +14,10 @@ class sort:
             for i in range(1, n):
                 ans = max(ans, dp[i])
             return ans
-        ans=solve(a,n)
+
+        ans = solve(a, n)
         print("最长递增子序列和为{}".format(ans))
 
+
 if __name__ == '__main__':
-    s=sort()
+    s = sort()
