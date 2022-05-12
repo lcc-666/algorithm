@@ -4,7 +4,7 @@ class MGraph:
         self.n = 7
         self.edges = [[0, 6, INF, INF, INF, 1, INF],
                       [6, 0, 4, INF, INF, INF, 3],
-                      [INF, 4, 0,2, INF, INF, INF],
+                      [INF, 4, 0, 2, INF, INF, INF],
                       [INF, INF, 2, 0, 6, INF, 5],
                       [INF, INF, INF, 6, 0, 8, 7],
                       [1, INF, INF, INF, 8, 0, INF],
