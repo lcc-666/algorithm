@@ -18,7 +18,7 @@ class MGraph:
         self.n = 7
         self.edges = [[0, 6, INF, INF, INF, 1, INF],
                       [6, 0, 4, INF, INF, INF, 3],
-                      [INF, 4, 2, INF, INF, INF],
+                      [INF, 4, 0, 2, INF, INF, INF],
                       [INF, INF, 2, 0, 6, INF, 5],
                       [INF, INF, INF, 6, 0, 8, 7],
                       [1, INF, INF, INF, 8, 0, INF],
@@ -64,7 +64,7 @@ class kruskal:
                         E[k].u = i
                         E[k].v = j
                         E[k].w = g.edges[i][j]
-                        k+=1
+                        k += 1
             E.sort(key=lambda x: x.w)
             MAKE_SET()
             k = 1
@@ -82,5 +82,7 @@ class kruskal:
                 j += 1
 
         Kruskal()
+
+
 if __name__ == '__main__':
-    s=kruskal()
+    s = kruskal()
